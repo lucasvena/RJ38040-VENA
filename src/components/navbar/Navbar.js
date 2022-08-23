@@ -5,7 +5,8 @@ const Navbar = () => {
 
     return (
         <nav className='stylesNavbar'>
-            <h4>TÍTULO TIENDA</h4>
+
+            <img className='styleLogo' src="/assets/logo.png" alt=''/>
 
             <ul className='stylesList'>
                 <li>

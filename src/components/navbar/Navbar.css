@@ -4,15 +4,15 @@
 }
 
 .stylesNavbar {
-    background-color: rgb(16, 16, 117);
+    background-color: rgb(221, 221, 221);
     font-family: sans-serif;
     display:flex;
     align-items: center;
     justify-content:space-around;
 }
 
-h4 {
-    color: whitesmoke;
+.styleLogo {
+    width: 15%;
 }
 
 .stylesList {
@@ -28,5 +28,5 @@ li {
 
 a {
     text-decoration: none;
-    color:aliceblue;
+    color: black;
 }
