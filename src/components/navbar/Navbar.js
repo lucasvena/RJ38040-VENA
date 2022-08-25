@@ -1,7 +1,8 @@
 import React from 'react'; 
-import './Navbar.css';
+import CartWidget from '../cartwidget/CartWidget';
+import './Navbar.scss';
 
-const Navbar = () => {
+export const Navbar = () => {
 
     return (
         <nav className='stylesNavbar'>
@@ -20,10 +21,11 @@ const Navbar = () => {
                 </li>
                 <li>
                     <a href='./app.js'>Contacto</a>
-                </li>
+                </li>                
             </ul>
+            
+            <CartWidget/>            
+
         </nav>
     )
 }
-
-export default Navbar;
