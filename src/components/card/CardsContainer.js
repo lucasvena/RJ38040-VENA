@@ -1,6 +1,6 @@
-import Cardcard from './Card'
+import {CardItem} from './Card'
 // se encargan de administrar la logica para renderizar o para enviar a los componentes de presentacion 
-const CardsContainer = () => {
+export const CardsContainer = () => {
     // trabaja la lógica primero
     const prod = [
         {
@@ -12,9 +12,9 @@ const CardsContainer = () => {
     // renderiza 
     return (
         <div>
-            <Cardcard anillos={ prod[0] }/>
+            <CardItem anillos={ prod[0] }/>
         </div>
     )
 }
 
-export default CardsContainer
+// export default CardsContainer

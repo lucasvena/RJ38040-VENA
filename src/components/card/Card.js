@@ -1,7 +1,7 @@
 import { Button, Card, Col, Row } from 'react-bootstrap';
 import './Card.css';
 
-const Cardcard = ( {anillos} ) => {
+export const CardItem = ( {anillos} ) => {
 
     const {nombre, descripcion, medida} = anillos
 
@@ -14,7 +14,7 @@ const Cardcard = ( {anillos} ) => {
                         <Card.Title>{nombre}</Card.Title>
                         <Card.Text>{descripcion}</Card.Text>
                         <Card.Text>{medida}</Card.Text>
-                        <Button variant="outline-primary">Comprar!</Button>
+                        <Button variant="outline-primary">Ver Item!</Button>
                     </Card.Body>
                 </Card>
             </Col>
@@ -22,4 +22,4 @@ const Cardcard = ( {anillos} ) => {
     );
 }
 
-export default Cardcard
+// export default Cardcard

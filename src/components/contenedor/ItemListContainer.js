@@ -1,5 +1,5 @@
 
-const ItemListContainer = (props) => {
+export const ItemListContainer = (props) => {
 
     
     const {usuario, mensaje} = props
@@ -15,4 +15,4 @@ const ItemListContainer = (props) => {
     )
 }
 
-export default ItemListContainer
+// export default ItemListContainer
