@@ -1,18 +1,28 @@
+import { useEffect, useState } from "react"
+import { pedirDatos } from "../../helpers/pedirDatos"
+import { ItemList } from "../ItemList/ItemList"
 
-export const ItemListContainer = (props) => {
-
+export const ItemListContainer = () => {
     
-    const {usuario, mensaje} = props
+    const [productos, setProductos] = useState([])
+    
+    useEffect( () => {
+        pedirDatos()
+            .then( (res) => {
+                setProductos(res)
+            })
+            .catch( (error) => {
+                console.log(error)
+            })
+            .finally(() => {
+                // console.log("Fin del proceso")
+            })
+    }, [])
+    
 
-    // Aca armamos las cards, muestran lo que les pasamos por propiedades
-    // Agregar las card por libreria dentro del return :)
     return (
         <div>
-            <h2> Bienvenido {usuario}</h2>
-            <hr/>
-            <p> {mensaje} </p>
+            <ItemList productos={productos}/>
         </div>
     )
 }
-
-// export default ItemListContainer
