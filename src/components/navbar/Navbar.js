@@ -1,26 +1,27 @@
 import React from 'react'; 
 import CartWidget from '../cartwidget/CartWidget';
 import './Navbar.scss';
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
 
     return (
         <nav className='stylesNavbar'>
 
-            <img className='styleLogo' src="/assets/logo.png" alt=''/>
+            <Link to='/'><img className='styleLogo' src="/assets/logo.png" alt=''/></Link>
 
             <ul className='stylesList'>
                 <li>
-                    <a href='./app.js'>Home</a>
+                    <Link to='/'>Home</Link>
                 </li>
                 <li>
-                    <a href='./app.js'>Catálogo</a>
+                    <Link to='/productos/anillos'>Anillos</Link>
                 </li>
                 <li>
-                    <a href='./app.js'>Quienes somos</a>
+                    <Link to='/productos/collares'>Collares</Link>
                 </li>
                 <li>
-                    <a href='./app.js'>Contacto</a>
+                    <Link to='/productos/aros'>Aros</Link>
                 </li>                
             </ul>
             

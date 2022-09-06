@@ -6,7 +6,8 @@ export const stock = [
         medida: 18 + 'mm',
         precio: 1000,
         img: '/assets/01.avif',
-        stock: 10
+        stock: 10,
+        category: 'anillos'
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ export const stock = [
         medida: 18 + 'mm',
         precio: 2000,
         img: '/assets/01.avif',
-        stock: 10
+        stock: 10,
+        category: 'anillos'
     },
     {
         id: 3,
@@ -24,7 +26,8 @@ export const stock = [
         medida: 18 + 'mm',
         precio: 3000,
         img: '/assets/01.avif',
-        stock: 10
+        stock: 10,
+        category: 'collares'
     },
     {
         id: 4,
@@ -33,7 +36,8 @@ export const stock = [
         medida: 18 + 'mm',
         precio: 4000,
         img: '/assets/01.avif',
-        stock: 10
+        stock: 10,
+        category: 'collares'
     },
     {
         id: 5,
@@ -42,7 +46,8 @@ export const stock = [
         medida: 18 + 'mm',
         precio: 5000,
         img: '/assets/01.avif',
-        stock: 10
+        stock: 10,
+        category: 'aros'
     },
     {
         id: 6,
@@ -51,6 +56,7 @@ export const stock = [
         medida: 18 + 'mm',
         precio: 6000,
         img: '/assets/01.avif',
-        stock: 10
+        stock: 10,
+        category: 'aros'
     }
 ]

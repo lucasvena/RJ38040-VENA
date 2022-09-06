@@ -2,20 +2,34 @@ import { Navbar } from './components/navbar/Navbar.js';
 import { ItemListContainer } from './components/contenedor/ItemListContainer.js';
 import { Contador } from './components/contador/ItemCount.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer.js';
+// import { Nosotros } from './components/Nosotros/Nosotros.js';
+// import { Contacto } from './components/Contacto/Contacto.js';
 
 const App = () => {
 
   return (
-    <div>
-      <Navbar/>
 
-      {/* aca pasamos las propiedades del objeto y repetimos los contenedores las veces que queremos*/}
-      <ItemListContainer/>
+    <BrowserRouter>
 
-      <Contador max={10}/>
+        <Navbar/>
+        <Routes>
 
-      
-    </div>
+          <Route path='/' element={ <ItemListContainer/> }/>
+          <Route path='/productos/:categoryId' element={ <ItemListContainer/> }/>
+          <Route path='/item/:itemId' element={ <ItemDetailContainer/> }/>
+
+          {/* <Route path='/nosotros' element={ <Nosotros/> }/>
+          <Route path='/contacto' element={ <Contacto/> }/> */}
+          {/* <Route path='*' element={ <Error404/>}/> */}
+          <Route path='*' element={ <Navigate to="/"/>}/>
+
+        </Routes>
+        
+        <Contador max={10}/>
+
+    </BrowserRouter>
   );
 }
 
