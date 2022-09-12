@@ -1,6 +1,5 @@
 import { Navbar } from './components/navbar/Navbar.js';
 import { ItemListContainer } from './components/contenedor/ItemListContainer.js';
-import { Contador } from './components/contador/ItemCount.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer.js';
@@ -26,8 +25,6 @@ const App = () => {
           <Route path='*' element={ <Navigate to="/"/>}/>
 
         </Routes>
-        
-        <Contador max={10}/>
 
     </BrowserRouter>
   );
