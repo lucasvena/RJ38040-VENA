@@ -1,11 +1,25 @@
-export const Nosotros = () => {
+// import { useEffect } from "react"
 
-    return (
-        <div className="container my-5">
-            <h2>Nosotros</h2>
-            <hr></hr>
+// export const Nosotros = () => {
 
-        </div>
-    )
+//     const handleClick = () => {
+//         console.log("Click!")        
+//     }
 
-}
+//     useEffect(() => {
+//         window.addEventListener('click', handleClick)
+
+//         return () => {
+//             window.removeEventListener('click', handleClick)
+//         }
+//     }, [])
+
+//     return (
+//         <div className="container my-5">
+//             <h2 onClick={handleClick}>Nosotros</h2>
+//             <hr></hr>
+
+//         </div>
+//     )
+
+// }

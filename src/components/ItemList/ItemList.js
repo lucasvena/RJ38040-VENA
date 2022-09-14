@@ -12,7 +12,8 @@ export const ItemList = ( {productos = []} ) => {
                 <div className="col-4 p-4">
                     <Item producto={prod} key={prod.id}/> 
                 </div>
-            )) }
+            )) 
+            }
         </div>
     )
 }

@@ -22,7 +22,10 @@ export const Navbar = () => {
                 </li>
                 <li>
                     <Link to='/productos/aros'>Aros</Link>
-                </li>                
+                </li>
+                {/* <li>
+                    <Link to='/nosotros'>Nosotros</Link>
+                </li>                 */}
             </ul>
             
             <CartWidget/>            

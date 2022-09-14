@@ -1,10 +1,30 @@
-// import { Card } from "react-bootstrap"
 import './ItemDetail.css';
 import { Icon } from '@iconify/react';
 import { Contador } from '../contador/ItemCount';
+import { useState } from 'react';
+// import { Select } from '../Select/Select';
 
 
 export const ItemDetail = ({item}) => {
+
+    const [ cantidad, setCantidad ] = useState(1)
+    // const [ talle, setTalle ] = useState(item.options[0].value)
+
+    const handleAgregar = () => {
+        const itemToCart = {
+            id: item.id,
+            precio: item.precio,
+            nombre: item.nombre,
+            // talle,
+            cantidad
+        }
+
+        console.log(itemToCart)
+        // console.log({
+        //     ...item,
+        //     cantidad
+        // })
+    }
 
     return (
         <div className='miContainer'>
@@ -36,18 +56,18 @@ export const ItemDetail = ({item}) => {
                             <h6>Descripción:</h6>
                             <p>{item.descripcion}</p>
                         </div>
+                        {/* <hr/>
+                        <Select options={item.options} onSelect={setTalle}/>
+                        <hr/> */}
 
-                        <Contador max={10}/>
 
-                        <div className="buttons mt-2">
-                            <button>
-                                <Icon icon="ant-design:shopping-cart-outlined" width="20" height="20"/>
-                                <strong>AGREGAR AL CARRITO</strong>
-                            </button>
-                            <button>
-                                <strong>COMPRAR!</strong>
-                            </button>
-                        </div>
+                        <Contador 
+                            max={item.stock}
+                            counter={cantidad}
+                            setCounter={setCantidad}
+                            handleAgregar={handleAgregar}
+                        />
+
                     </div>
                 </div>
             </div>

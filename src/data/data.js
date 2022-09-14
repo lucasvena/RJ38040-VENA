@@ -7,7 +7,21 @@ export const stock = [
         precio: 1000,
         img: '/assets/01.avif',
         stock: 10,
-        category: 'anillos'
+        category: 'anillos',
+        // options:[
+        //         {
+        //             value: 'L',
+        //             text: 'Large'
+        //         },
+        //         {
+        //             value: 'M',
+        //             text: 'Medium'
+        //         },
+        //         {
+        //             value: 'S',
+        //             text: 'Small'
+        //         },
+        //     ]
     },
     {
         id: 2,
@@ -15,7 +29,7 @@ export const stock = [
         descripcion: 'Anillo con piedra natural , bañado en plata 925',
         medida: 18 + 'mm',
         precio: 2000,
-        img: '/assets/01.avif',
+        img: '/assets/02.avif',
         stock: 10,
         category: 'anillos'
     },
@@ -25,7 +39,7 @@ export const stock = [
         descripcion: 'Anillo con piedra natural , bañado en plata 925',
         medida: 18 + 'mm',
         precio: 3000,
-        img: '/assets/01.avif',
+        img: '/assets/03.avif',
         stock: 10,
         category: 'collares'
     },
@@ -35,7 +49,7 @@ export const stock = [
         descripcion: 'Anillo con piedra natural , bañado en plata 925',
         medida: 18 + 'mm',
         precio: 4000,
-        img: '/assets/01.avif',
+        img: '/assets/04.avif',
         stock: 10,
         category: 'collares'
     },
@@ -45,7 +59,7 @@ export const stock = [
         descripcion: 'Anillo con piedra natural , bañado en plata 925',
         medida: 18 + 'mm',
         precio: 5000,
-        img: '/assets/01.avif',
+        img: '/assets/05.avif',
         stock: 10,
         category: 'aros'
     },
@@ -55,7 +69,7 @@ export const stock = [
         descripcion: 'Anillo con piedra natural , bañado en plata 925',
         medida: 18 + 'mm',
         precio: 6000,
-        img: '/assets/01.avif',
+        img: '/assets/06.avif',
         stock: 10,
         category: 'aros'
     }
