@@ -30,9 +30,6 @@ export const Contador = ({max, counter, setCounter, handleAgregar}) => {
                 <button onClick={handleAgregar}>
                     <strong><Icon icon="ant-design:shopping-cart-outlined" width="20" height="20"/>Agregar al carrito</strong>
                 </button>
-                <button>
-                    <strong>Comprar!</strong>
-                </button>
             </div>
         </div>
     )

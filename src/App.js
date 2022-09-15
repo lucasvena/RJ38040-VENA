@@ -5,28 +5,34 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer.js';
 // import { Nosotros } from './components/Nosotros/Nosotros.js';
 // import { Contacto } from './components/Contacto/Contacto.js';
+import { CartProvider } from './context/CartContext.js';
+import { Cart } from './components/Cart/Cart.js';
 
 const App = () => {
-
+  
   return (
+    <CartProvider>
 
-    <BrowserRouter>
+      <BrowserRouter>
 
-        <Navbar/>
-        <Routes>
+          <Navbar/>
+          <Routes>
 
-          <Route path='/' element={ <ItemListContainer/> }/>
-          <Route path='/productos/:categoryId' element={ <ItemListContainer/> }/>
-          <Route path='/item/:itemId' element={ <ItemDetailContainer/> }/>
+            <Route path='/' element={ <ItemListContainer/> }/>
+            <Route path='/productos/:categoryId' element={ <ItemListContainer/> }/>
+            <Route path='/item/:itemId' element={ <ItemDetailContainer/> }/>
 
-          {/* <Route path='/nosotros' element={ <Nosotros/> }/> */}
-          {/* <Route path='/contacto' element={ <Contacto/> }/> */}
-          {/* <Route path='*' element={ <Error404/>}/> */}
-          <Route path='*' element={ <Navigate to="/"/>}/>
+            <Route path='/cart' element={<Cart/>}/>
+            {/* <Route path='/nosotros' element={ <Nosotros/> }/> */}
+            {/* <Route path='/contacto' element={ <Contacto/> }/> */}
+            {/* <Route path='*' element={ <Error404/>}/> */}
+            <Route path='*' element={ <Navigate to="/"/>}/>
 
-        </Routes>
+          </Routes>
 
-    </BrowserRouter>
+      </BrowserRouter>
+
+    </CartProvider>
   );
 }
 
