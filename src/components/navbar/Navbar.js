@@ -2,8 +2,11 @@ import React from 'react';
 import CartWidget from '../cartwidget/CartWidget';
 import './Navbar.scss';
 import { Link } from 'react-router-dom';
+import { useLoginContext } from '../../context/LogingContext';
 
 export const Navbar = () => {
+
+    const {user, logout} = useLoginContext()
 
     return (
         <nav className='stylesNavbar'>
@@ -28,8 +31,14 @@ export const Navbar = () => {
                 </li>                 */}
             </ul>
             
-            <CartWidget/>            
+            <CartWidget/>     
 
+            <div className='header-user'>
+                <small>Bienvenido: {user.user}</small> 
+                <button onClick={logout} className='btn btn-outline-danger'>Salir</button>          
+            </div>       
         </nav>
+
+        
     )
 }

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { pedirDatos } from "../../helpers/pedirDatos";
 import { ItemList } from "../ItemList/ItemList";
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
+import { useLoginContext } from "../../context/LogingContext";
 
 export const ItemListContainer = () => {
     
@@ -30,13 +31,22 @@ export const ItemListContainer = () => {
     }, [categoryId])
     
 
-    return (
-        <div>
-            {
-                loading ? <h2>Cargando...</h2>
-                : <ItemList productos={productos}/>
-            }
+    const {user} = useLoginContext()
 
-        </div>
+    return (
+        <>
+            {
+                user.logged
+                ?
+                    <div>
+                        {
+                            loading ? <h2>Cargando...</h2>
+                            : <ItemList productos={productos}/>
+                        }
+
+                    </div>
+                : <Navigate to="/login" />
+            }
+        </>
     )
 }
