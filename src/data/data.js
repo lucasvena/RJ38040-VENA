@@ -6,7 +6,7 @@ export const stock = [
         medida: 18 + 'mm',
         precio: 1000,
         img: '/assets/01.avif',
-        stock: 10,
+        stock: 0,
         category: 'anillos',
         // options:[
         //         {

@@ -2,14 +2,15 @@ import { Icon } from '@iconify/react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
+import './CartWidget.scss';
 
 const CartWidget = () => {
 
-    const { cartQuantity } = useContext(CartContext)
+    const { cartQuantity, cart } = useContext(CartContext)
 
     return (
-        <Link to="/cart">
-            <Icon icon="ant-design:shopping-cart-outlined" width="25" height="25" />
+        <Link to="/cart" className={`widget ${cart.length > 0 ? 'widget-visible' : ''}`}>
+            <Icon icon="ant-design:shopping-cart-outlined"/>
             <span>{cartQuantity()}</span>
         </Link>
     )

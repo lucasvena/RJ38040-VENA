@@ -14,7 +14,11 @@ export const Item = ( {producto} ) => {
                     <Card.Text>{precio}</Card.Text>
                     <Card.Text> Stock disponible: {stock}</Card.Text>
                     <Card.Text> {descripcion}</Card.Text>
-                    <Link to={`/item/${id}`} variant="outline-primary">Ver más del producto!</Link>
+                    {
+                        stock > 0
+                        ? <Link to={`/item/${id}`} className="btn btn-outline-primary">Ver más del producto!</Link>
+                        : <Card.Text className='btn btn-outline-danger'>Sin Stock</Card.Text>
+                    }
                 </Card.Body>
             </Card>
         </div>

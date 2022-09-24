@@ -3,11 +3,12 @@ import CartWidget from '../cartwidget/CartWidget';
 import './Navbar.scss';
 import { Link } from 'react-router-dom';
 import { useLoginContext } from '../../context/LogingContext';
+import { useCartContext } from '../../context/CartContext';
 
 export const Navbar = () => {
 
     const {user, logout} = useLoginContext()
-
+   
     return (
         <nav className='stylesNavbar'>
 

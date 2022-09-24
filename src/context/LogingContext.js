@@ -12,7 +12,7 @@ const usuarios = [
         password: '1234'
     },
     {
-        email: 'Ana@abc.com',
+        email: 'ana@abc.com',
         password: '1234'
     }
 ]
@@ -21,8 +21,9 @@ export const LoginProvider = ({children}) => {
 
 
     const [user, setUser] = useState({
-        user: '',
-        logged: false
+        user: 'lucas@abc.com',
+        logged: true,
+        error: ''
     })
 
     const login = (values) => {
@@ -32,13 +33,22 @@ export const LoginProvider = ({children}) => {
             if (match.password === values.pass) {
                 setUser({
                     user: match.email,
-                    logged: true
+                    logged: true,
+                    error: ''
                 })
             } else {
-                alert("Password incorrecto")
+                setUser({
+                    user: '',
+                    logged: false,
+                    error: "Password incorrecto"
+                })
             }
         } else {
-            alert("Email incorrecto")
+            setUser({
+                user: '',
+                logged: false,
+                error: "Email incorrecto"
+            })
         }
     }
 
