@@ -10,8 +10,8 @@ import { Link } from 'react-router-dom';
 
 export const ItemDetail = ({item}) => {
 
-    const {cart, addToCart, isInCart} = useCartContext()
-    console.log(cart)
+    const { addToCart, isInCart} = useCartContext()
+    
     
     const [ cantidad, setCantidad ] = useState(1)
     // const [ talle, setTalle ] = useState(item.options[0].value)
@@ -22,8 +22,8 @@ export const ItemDetail = ({item}) => {
             precio: item.precio,
             nombre: item.nombre,
             category: item.category,
-            // talle,
             cantidad
+            // talle,
         }
         console.log (isInCart(item.id))
         addToCart( itemToCart )
