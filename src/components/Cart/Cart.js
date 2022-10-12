@@ -24,7 +24,6 @@ export const Cart = () => {
             <hr/>    
 
             { cart.map((item) => (
-                // <CartItem key={} item={item}/> tratar de optimizar
                 <div key={item.id}>
                     <h3>{item.nombre}</h3>
                     <p>Precio: ${item.precio}</p>

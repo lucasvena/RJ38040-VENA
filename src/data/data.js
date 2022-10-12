@@ -8,20 +8,6 @@ export const stock = [
         img: '/assets/01.avif',
         stock: 0,
         category: 'anillos',
-        // options:[
-        //         {
-        //             value: 'L',
-        //             text: 'Large'
-        //         },
-        //         {
-        //             value: 'M',
-        //             text: 'Medium'
-        //         },
-        //         {
-        //             value: 'S',
-        //             text: 'Small'
-        //         },
-        //     ]
     },
     {
         id: 2,

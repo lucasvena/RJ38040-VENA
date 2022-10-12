@@ -9,7 +9,7 @@ const CartWidget = () => {
     const { cartQuantity, cart } = useContext(CartContext)
 
     return (
-        <Link to="/cart" className={`widget ${cart.length > 0 ? 'widget-visible' : ''}`}>
+        <Link to="/cart" className= {`widget ${cart.length > 0 ? 'widget-visible' : ''} style-widget`}>
             <Icon icon="ant-design:shopping-cart-outlined"/>
             <span>{cartQuantity()}</span>
         </Link>

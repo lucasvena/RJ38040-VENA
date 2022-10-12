@@ -8,10 +8,10 @@
     font-family: sans-serif;
     display:flex;
     align-items: center;
-    justify-content:space-around;
+    padding: 5px 10px;
     
     .styleLogo {
-        width: 15%;
+        width: 25%;
     }
 
     .stylesList {
@@ -26,7 +26,10 @@
                 text-decoration: none;
                 color: black;
             }
-        }
+        }  
+    }
+    .style-user {
+        display: flex;  
     }
 }
     

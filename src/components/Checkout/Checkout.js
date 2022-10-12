@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Navigate } from "react-router-dom"
 import { useCartContext } from "../../context/CartContext"
-import { addDoc, collection } from 'firebase/firestore'
+import { addDoc, collection, doc, getDoc, updateDoc } from 'firebase/firestore'
 import { db } from "../../firebase/config"
 
 export const Checkout = () => {
@@ -43,6 +43,19 @@ export const Checkout = () => {
 
         const ordenesRef = collection(db, 'ordenes')
 
+        cart.forEach((item) => {
+            const docRef = doc(db, 'productos', item.id)
+
+            getDoc(docRef)
+                .then((doc) => {
+
+                    updateDoc(docRef, {
+                        stock: doc.data().stock - item.cantidad
+                    })
+                })
+
+        })
+
         addDoc(ordenesRef, orden)
         .then((doc) => {
             console.log(doc.id)
@@ -58,8 +71,8 @@ export const Checkout = () => {
         <div className="container my-5">
             <h2>Checkout</h2>
             <hr/>
-
-            <form onSubmit={handleSubmit}>
+                
+            <form className="style-form" onSubmit={handleSubmit}>
                 <input
                     name="nombre"
                     onChange={handleInputChange} 

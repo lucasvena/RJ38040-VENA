@@ -5,7 +5,7 @@ export const ItemList = ( {productos = []} ) => {
 
     return (
         <div className="row m-5">
-            <h2> Productos </h2>
+            <h2> PRODUCTOS </h2>
             <hr/>
             
             { productos.map((prod) => (
